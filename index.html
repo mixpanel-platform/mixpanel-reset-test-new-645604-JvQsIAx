@@ -29,14 +29,16 @@
       
       
       var runQuery = function(){
-        var events1 = eventSelect.MPEventSelect('value');
+        var events1 = eventSelect.MPEventSelect('value'),
+        props1 = propSelect.MPPropertySelect('value'),
+        range1 = dateSelect.MPDatepicker('value');
     
       };
       
       console.log(MP.api.segment(events1));
     
     
-    
+    eventSelect.on("change", runQuery());
    
     </script>
   </body>
