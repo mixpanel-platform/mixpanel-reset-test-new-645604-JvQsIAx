@@ -33,9 +33,13 @@
         props1 = propSelect.MPPropertySelect('value'),
         range1 = dateSelect.MPDatepicker('value');
     
+    
+        if (events1){
+          console.log(MP.api.segment(events1));
+        };
       };
       
-      console.log(MP.api.segment(events1));
+      
     
     
     eventSelect.on("change", runQuery());
